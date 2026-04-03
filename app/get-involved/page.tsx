@@ -16,21 +16,21 @@ const pathways = [
     who: "Anyone who believes culture has economic value",
     benefits: "Citizen ID, token wallet, marketplace access, festival perks",
     cta: "Become a Citizen",
-    image: "/pexels-bestbe-models-975242-2331522.jpg"
+    image: "/join-citizen.png"
   },
   {
     title: "Become a Creator",
     who: "Musicians, filmmakers, artists, writers, influencers",
     benefits: "Creator profile, funding access, streaming, festival showcase",
     cta: "Apply as Creator",
-    image: "/pexels-anchau-1663967297-33137686.jpg"
+    image: "/join-creator.png"
   },
   {
     title: "Become a Vendor",
     who: "Brands, merchants, and cultural entrepreneurs",
     benefits: "Marketplace storefront, vendor dashboard, pan-African distribution",
     cta: "Register as Vendor",
-    image: "/pexels-dokun-ayano-2197443-27291194.jpg"
+    image: "/join-vendor.png"
   },
   {
     title: "Invest / Partner",
@@ -38,7 +38,7 @@ const pathways = [
     benefits: "Investor briefing, partnership tiers, creative capital fund access",
     cta: "Request Briefing",
     href: "/invest-partner",
-    image: "/pexels-cottonbro-4125600.jpg"
+    image: "/join-partner.png"
   }
 ];
 
@@ -46,12 +46,12 @@ const volunteerCards = [
   {
     title: "Volunteer at Festivals",
     description: "Help bring Africa's cultural festivals to life. Contribute your time, skills, and energy.",
-    image: "/oscar-omondi-yPvEDY-kMCI-unsplash.jpg"
+    image: "/join-volunteer.png"
   },
   {
     title: "Become a Culture Envoy",
     description: "Represent ReelPepper Africa in your city. Be the bridge between local culture and continental infrastructure.",
-    image: "/timothy-barlin-jUzs3ZbYXR0-unsplash.jpg"
+    image: "/join-envoy.png"
   }
 ];
 
@@ -70,7 +70,7 @@ export default function GetInvolvedPage() {
       {/* Hero with background image */}
       <section className="relative bg-black pb-16 pt-28 md:pb-20 md:pt-32 overflow-hidden">
         <Image
-          src="/ReelKulture Johannesburg - South African musicculture festival.jpg"
+          src="/festival-johannesburg.png"
           alt=""
           fill
           className="object-cover opacity-35"

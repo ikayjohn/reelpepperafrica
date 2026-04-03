@@ -20,7 +20,7 @@ export default function AboutPage() {
         eyebrow="About ReelPepper Africa"
         title="Redefining Culture as Economic Sovereignty"
         description="ReelPepper Africa is a pan-African creative economy platform that turns cultural participation into structured economic returns."
-        backgroundImage="/African woman in vibrant traditional fashion.jpg"
+        backgroundImage="/hero-about-woman.png"
       />
 
       {/* Vision Statement */}
@@ -54,7 +54,7 @@ export default function AboutPage() {
           <Reveal delay={0.1}>
             <div className="relative aspect-[4/5] overflow-hidden rounded-card">
               <Image
-                src="/African woman in vibrant traditional fashion.jpg"
+                src="/hero-about-woman.png"
                 alt="Woman in vibrant African-inspired fashion."
                 fill
                 className="object-cover"

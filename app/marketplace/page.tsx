@@ -22,14 +22,14 @@ const categories = [
 ];
 
 const products = [
-  { name: "Ankara Print Wall Art", price: "₦15,000", vendor: "Naija Canvas Studio", image: "/Ankara print wall art.png" },
-  { name: "Afrobeats Production Kit", price: "₦45,000", vendor: "Afro Sonic Labs", image: "/Music production studio.jpg" },
-  { name: "Lagos Street Photography Print", price: "₦8,500", vendor: "Iya Oge Designs", image: "/Lagos street photography.jpg" },
-  { name: "Handwoven Kente Tote Bag", price: "₦22,000", vendor: "Accra Weavers Co.", image: "/Handwoven kente tote bag.jpg" },
-  { name: "Adire Indigo Table Runner", price: "₦12,500", vendor: "Osun Heritage Crafts", image: "/Adire indigo-dyed fabric batik.png" },
-  { name: "Nollywood Film Score Bundle", price: "₦35,000", vendor: "Afro Sonic Labs", image: "/African musical instruments .jpg" },
-  { name: "Beaded Jewelry Set", price: "₦18,000", vendor: "Iya Oge Designs", image: "/African beaded jewelry set.jpg" },
-  { name: "Djembe Drum (Handcrafted)", price: "₦55,000", vendor: "Mali Rhythms Workshop", image: "/Handcrafted djembe drum.jpg" }
+  { name: "Ankara Print Wall Art", price: "₦15,000", vendor: "Naija Canvas Studio", image: "/product-ankara-art.png" },
+  { name: "Afrobeats Production Kit", price: "₦45,000", vendor: "Afro Sonic Labs", image: "/product-studio-kit.png" },
+  { name: "Lagos Street Photography Print", price: "₦8,500", vendor: "Iya Oge Designs", image: "/product-lagos-photo.png" },
+  { name: "Handwoven Kente Tote Bag", price: "₦22,000", vendor: "Accra Weavers Co.", image: "/product-kente-tote.png" },
+  { name: "Adire Indigo Table Runner", price: "₦12,500", vendor: "Osun Heritage Crafts", image: "/product-adire-runner.png" },
+  { name: "Nollywood Film Score Bundle", price: "₦35,000", vendor: "Afro Sonic Labs", image: "/product-score-bundle.png" },
+  { name: "Beaded Jewelry Set", price: "₦18,000", vendor: "Iya Oge Designs", image: "/product-jewelry.png" },
+  { name: "Djembe Drum (Handcrafted)", price: "₦55,000", vendor: "Mali Rhythms Workshop", image: "/product-djembe.png" }
 ];
 
 export default function MarketplacePage() {
@@ -39,7 +39,7 @@ export default function MarketplacePage() {
         eyebrow="The Culture Marketplace"
         title="The marketplace for Africa's creative economy."
         description="Discover art, fashion, music, and cultural products from verified vendors across the continent."
-        backgroundImage="/African market vendor selling creative.jpg"
+        backgroundImage="/hero-marketplace-vendor.png"
       />
 
       {/* Category tabs */}
@@ -112,7 +112,7 @@ export default function MarketplacePage() {
             </div>
             <div className="relative aspect-[16/10] overflow-hidden rounded-card">
               <Image
-                src="/African market vendor selling creative.jpg"
+                src="/hero-marketplace-vendor.png"
                 alt="African vendor presenting creative products."
                 fill
                 className="object-cover"

@@ -21,22 +21,22 @@ const investmentVehicles = [
   {
     title: "Creative Ventures Fund",
     description: "Direct investment into high-potential creative enterprises across the continent.",
-    image: "/pexels-ahmad-muhammad-mahuta-2154109106-33789161.jpg"
+    image: "/invest-ventures.png"
   },
   {
     title: "Festival Sponsorship",
     description: "Brand visibility and cultural alignment through flagship festival partnerships.",
-    image: "/mpumelelo-macu-l_YNobbDYJk-unsplash.jpg"
+    image: "/invest-sponsorship.png"
   },
   {
     title: "Token Economy Participation",
     description: "Structured participation in the tokenized creative economy infrastructure.",
-    image: "/karim-manjra-fm9wqDNXyQ0-unsplash.jpg"
+    image: "/invest-token.png"
   },
   {
     title: "Impact Fund",
     description: "Social returns through health, education, and sustainability programs.",
-    image: "/annie-spratt-cVEOh_JJmEE-unsplash.jpg"
+    image: "/invest-impact.png"
   }
 ];
 
@@ -62,7 +62,7 @@ export default function InvestPartnerPage() {
       {/* Hero */}
       <section className="relative bg-black pb-16 pt-28 md:pb-20 md:pt-32 overflow-hidden">
         <Image
-          src="/FlixnFlex Nairobi kenyan live music.jpg"
+          src="/festival-nairobi.png"
           alt=""
           fill
           className="object-cover opacity-30"

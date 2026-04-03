@@ -18,43 +18,43 @@ const featuredFestivals = [
     title: "ReelKulture Lagos",
     date: "March 15-22, 2026",
     location: "Lagos, Nigeria",
-    image: "/ReelKulture Lagos — African music festival, concert crowd at night.jpg"
+    image: "/festival-lagos.png"
   },
   {
     title: "ReelRhyde Abuja",
     date: "April 5-10, 2026",
     location: "Abuja, Nigeria",
-    image: "/ReelRhyde Abuja — live African concert with stage lights.jpg"
+    image: "/festival-abuja.png"
   },
   {
     title: "ArtBuddie Accra",
     date: "May 12-18, 2026",
     location: "Accra, Ghana",
-    image: "/ArtBuddie Accra — Ghanaian art exhibitioncommunity gathering.png"
+    image: "/festival-accra.png"
   },
   {
     title: "Krea84Reel Port Harcourt",
     date: "April 20-25, 2026",
     location: "Port Harcourt, Nigeria",
-    image: "/Krea84Reel Port Harcourt — African food & art cultural event.jpg"
+    image: "/festival-portharcourt.png"
   },
   {
     title: "FlixnFlex Nairobi",
     date: "June 8-14, 2026",
     location: "Nairobi, Kenya",
-    image: "/FlixnFlex Nairobi kenyan live music.jpg"
+    image: "/festival-nairobi.png"
   }
 ];
 
 const marketplaceProducts = [
-  { name: "Ankara Print Wall Art", price: "₦15,000", image: "/Ankara print wall art.png" },
-  { name: "Afrobeats Production Kit", price: "₦45,000", image: "/Music production studio.jpg" },
-  { name: "Lagos Street Photography", price: "₦8,500", image: "/Lagos street photography.jpg" },
-  { name: "Handwoven Kente Tote", price: "₦22,000", image: "/Handwoven kente tote bag.jpg" },
-  { name: "Adire Indigo Runner", price: "₦12,500", image: "/Adire indigo-dyed fabric batik.png" },
-  { name: "Beaded Jewelry Set", price: "₦18,000", image: "/African beaded jewelry set.jpg" },
-  { name: "Handcrafted Djembe", price: "₦55,000", image: "/Handcrafted djembe drum.jpg" },
-  { name: "African Instruments", price: "₦35,000", image: "/African musical instruments .jpg" }
+  { name: "Ankara Print Wall Art", price: "₦15,000", image: "/product-ankara-art.png" },
+  { name: "Afrobeats Production Kit", price: "₦45,000", image: "/product-studio-kit.png" },
+  { name: "Lagos Street Photography", price: "₦8,500", image: "/product-lagos-photo.png" },
+  { name: "Handwoven Kente Tote", price: "₦22,000", image: "/product-kente-tote.png" },
+  { name: "Adire Indigo Runner", price: "₦12,500", image: "/product-adire-runner.png" },
+  { name: "Beaded Jewelry Set", price: "₦18,000", image: "/product-jewelry.png" },
+  { name: "Handcrafted Djembe", price: "₦55,000", image: "/product-djembe.png" },
+  { name: "African Instruments", price: "₦35,000", image: "/product-score-bundle.png" }
 ];
 
 const spotlights = [
@@ -62,29 +62,29 @@ const spotlights = [
     name: "Adaeze Okonkwo",
     role: "Fashion Designer, Lagos",
     quote: "ReelPepper gave my brand a stage that reaches beyond borders.",
-    image: "/African woman portrait — fashion designer.jpg"
+    image: "/maker-designer.png"
   },
   {
     name: "Kwame Asante",
     role: "Filmmaker, Accra",
     quote: "A platform that treats African creators as the architects, not the content.",
-    image: "/African man portrait — filmmaker.jpg"
+    image: "/maker-filmmaker.png"
   },
   {
     name: "Fatimah Bello",
     role: "Music Producer, Abuja",
     quote: "My music funds other creators. That's the kind of cycle Africa needs.",
-    image: "/African woman portrait — music producer.png"
+    image: "/maker-producer.png"
   }
 ];
 
 const ecosystemImages = [
-  { title: "Citizen Activation", image: "/African cultural performancefestival with vibrant crowd.jpg", href: "/ecosystem#citizen-activation" },
-  { title: "Creative Commerce", image: "/African market vendor selling creative.jpg", href: "/ecosystem#creative-commerce" },
-  { title: "Festivals", image: "/ReelKulture Johannesburg - South African musicculture festival.jpg", href: "/ecosystem#festivals" },
-  { title: "Creative Finance", image: "/Lagos street photography.jpg", href: "/ecosystem#creative-finance" },
-  { title: "Digital Infrastructure", image: "/Music production studio.jpg", href: "/ecosystem#digital-infrastructure" },
-  { title: "Impact & Sustainability", image: "/African woman in vibrant traditional fashion.jpg", href: "/ecosystem#impact" }
+  { title: "Citizen Activation", image: "/eco-citizens.png", href: "/ecosystem#citizen-activation" },
+  { title: "Creative Commerce", image: "/eco-commerce.png", href: "/ecosystem#creative-commerce" },
+  { title: "Festivals", image: "/eco-festival-johannesburg.png", href: "/ecosystem#festivals" },
+  { title: "Creative Finance", image: "/eco-finance.png", href: "/ecosystem#creative-finance" },
+  { title: "Digital Infrastructure", image: "/eco-digital.png", href: "/ecosystem#digital-infrastructure" },
+  { title: "Impact & Sustainability", image: "/hero-about-woman.png", href: "/ecosystem#impact" }
 ];
 
 export default function HomePage() {
@@ -93,7 +93,7 @@ export default function HomePage() {
       {/* ========== 1. HERO — Full-screen cinematic ========== */}
       <section className="relative flex min-h-[100svh] items-center bg-black">
         <Image
-          src="/African cultural performancefestival with vibrant crowd.jpg"
+          src="/hero-festival-main.png"
           alt="African performers on stage during a vibrant cultural event."
           fill
           className="object-cover opacity-60"
@@ -142,14 +142,16 @@ export default function HomePage() {
               </a>
             </div>
           </Reveal>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
             {ecosystemImages.map((item, i) => (
               <Reveal key={item.title} delay={i * 0.04}>
-                <a href={item.href} className="group relative block aspect-[2/3] overflow-hidden rounded-lg">
+                <a href={item.href} className="group relative block aspect-[4/3] overflow-hidden rounded-lg xl:aspect-[3/4]">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
+                    unoptimized
+                    quality={90}
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
                   />
@@ -280,8 +282,8 @@ export default function HomePage() {
       {/* ========== 7. FULL-WIDTH CTA BANNER ========== */}
       <section className="relative py-24">
         <Image
-          src="/African woman in vibrant traditional fashion.jpg"
-          alt="African woman in vibrant traditional fashion."
+          src="/hero-about-woman.png"
+          alt="Confident African cultural visionary in contemporary traditional fashion."
           fill
           className="object-cover"
           sizes="100vw"

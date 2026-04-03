@@ -46,7 +46,7 @@ export default function ContactPage() {
     <>
       <section className="relative bg-black pb-16 pt-28 md:pb-20 md:pt-32 overflow-hidden">
         <Image
-          src="/ArtBuddie Accra — Ghanaian art exhibitioncommunity gathering.png"
+          src="/hero-contact-gathering.png"
           alt=""
           fill
           className="object-cover opacity-30"

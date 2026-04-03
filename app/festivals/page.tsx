@@ -18,7 +18,7 @@ const festivals = [
     location: "Lagos, Nigeria",
     categories: ["Music", "Film", "Art"],
     tokenEligible: true,
-    image: "/ReelKulture Lagos — African music festival, concert crowd at night.jpg",
+    image: "/festival-lagos.png",
     description: "A premium culture week of film, music, conversation, and creative commerce designed to activate community at scale."
   },
   {
@@ -27,7 +27,7 @@ const festivals = [
     location: "Abuja, Nigeria",
     categories: ["Music", "Tech"],
     tokenEligible: true,
-    image: "/ReelRhyde Abuja — live African concert with stage lights.jpg",
+    image: "/festival-abuja.png",
     description: "A mobile-activated festival experience blending live performance, digital participation, and cultural exchange."
   },
   {
@@ -36,7 +36,7 @@ const festivals = [
     location: "Port Harcourt, Nigeria",
     categories: ["Art", "Food"],
     tokenEligible: false,
-    image: "/Krea84Reel Port Harcourt — African food & art cultural event.jpg",
+    image: "/festival-portharcourt.png",
     description: "A creator-focused cultural convergence celebrating local art, cuisine, and entrepreneurship."
   },
   {
@@ -45,7 +45,7 @@ const festivals = [
     location: "Accra, Ghana",
     categories: ["Art", "Fashion"],
     tokenEligible: true,
-    image: "/ArtBuddie Accra — Ghanaian art exhibitioncommunity gathering.png",
+    image: "/festival-accra.png",
     description: "An art and community gathering connecting West African creatives with continental audiences."
   },
   {
@@ -54,7 +54,7 @@ const festivals = [
     location: "Nairobi, Kenya",
     categories: ["Film", "Music", "Tech"],
     tokenEligible: true,
-    image: "/FlixnFlex Nairobi kenyan live music.jpg",
+    image: "/festival-nairobi.png",
     description: "Streaming, screening, and live performance events bridging East and West African creative scenes."
   },
   {
@@ -63,7 +63,7 @@ const festivals = [
     location: "Johannesburg, South Africa",
     categories: ["Music", "Art", "Fashion"],
     tokenEligible: false,
-    image: "/ReelKulture Johannesburg - South African musicculture festival.jpg",
+    image: "/festival-johannesburg.png",
     description: "The Southern African edition of ReelPepper's flagship culture festival, celebrating diversity and creative exchange."
   }
 ];
@@ -75,7 +75,7 @@ export default function FestivalsPage() {
         eyebrow="Festivals & Convergences"
         title="Experience Culture Across 54 Nations"
         description="Live cultural experiences that move people from audience to active participants. Register for upcoming festivals and events."
-        backgroundImage="/ReelKulture Lagos — African music festival, concert crowd at night.jpg"
+        backgroundImage="/festival-lagos.png"
       />
 
       {/* Filter bar placeholder */}

@@ -16,42 +16,42 @@ const pillars = [
     id: "citizen-activation",
     title: "Citizen Activation",
     description: "Culture Citizens are enrolled, activated, and connected to every layer of participation.",
-    image: "/pexels-zeal-creative-studios-58866141-33697671.jpg",
+    image: "/eco-citizens.png",
     programs: ["Reel4Life", "ReelBuddie", "Reel3rybeFace", "ReelKulture"]
   },
   {
     id: "creative-commerce",
     title: "Creative Commerce",
     description: "A pan-African marketplace where cultural products are discovered, sold, and scaled.",
-    image: "/African market vendor selling creative.jpg",
+    image: "/eco-commerce.png",
     programs: ["Shop4Reel", "Crea80candy", "ReelPreneur", "Gift4Reel"]
   },
   {
     id: "festivals",
     title: "Festivals & Convergences",
     description: "Live cultural experiences that move people from audience to active participants.",
-    image: "/ReelKulture Lagos — African music festival, concert crowd at night.jpg",
+    image: "/eco-festival-johannesburg.png",
     programs: ["ReelKulture Festival", "ReelRhyde Mobile", "Krea84Reel", "ArtBuddie", "FlixnFlex"]
   },
   {
     id: "creative-finance",
     title: "Creative Finance",
     description: "Structured investment and funding tools that turn cultural participation into economic returns.",
-    image: "/pexels-cottonbro-4125600.jpg",
+    image: "/eco-finance.png",
     programs: ["CashMyReel", "ReelBanker", "Fund4Reel", "Reelmonie"]
   },
   {
     id: "digital-infrastructure",
     title: "Digital Infrastructure",
     description: "Mobile-first access layer connecting tokens, telecom, streaming, and analytics.",
-    image: "/pexels-kh-ali-li-6724947.jpg",
+    image: "/eco-digital.png",
     programs: ["Stream4Reel", "ReelRhyde", "ReelPulse", "Data4Reel"]
   },
   {
     id: "impact",
     title: "Impact & Sustainability",
     description: "Transparent tracking of real outcomes — health, education, and environmental sustainability.",
-    image: "/annie-spratt-QdK6aujOLYs-unsplash.jpg",
+    image: "/hero-about-woman.png",
     programs: ["Reel2Green", "Reel2Care", "Aid4Reel", "ReelRoodie"]
   }
 ];
@@ -63,7 +63,7 @@ export default function EcosystemPage() {
         eyebrow="The Ecosystem"
         title="Six pillars. One unified creative economy."
         description="Every pillar of the ReelPepper ecosystem connects creation, commerce, and impact into a self-sustaining cycle across 54 nations."
-        backgroundImage="/African cultural performancefestival with vibrant crowd.jpg"
+        backgroundImage="/hero-festival-main.png"
       />
 
       {/* Pillar grid — Netflix-style large image cards */}
@@ -82,6 +82,7 @@ export default function EcosystemPage() {
                       src={pillar.image}
                       alt={pillar.title}
                       fill
+                      quality={90}
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />

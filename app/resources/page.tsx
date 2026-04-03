@@ -15,9 +15,9 @@ export const metadata = {
 const tabs = ["ReelPulse TV", "Press Releases", "Whitepapers", "Creator Toolkits", "Festival Media"];
 
 const videos = [
-  { title: "The ReelPepper Vision: Culture as Capital", duration: "4:32", thumbnail: "/ReelKulture Lagos — African music festival, concert crowd at night.jpg" },
-  { title: "Lagos Story Futures: Behind the Scenes", duration: "12:15", thumbnail: "/ReelRhyde Abuja — live African concert with stage lights.jpg" },
-  { title: "Meet the Culture Makers: Season 1", duration: "22:08", thumbnail: "/ArtBuddie Accra — Ghanaian art exhibitioncommunity gathering.png" }
+  { title: "The ReelPepper Vision: Culture as Capital", duration: "4:32", thumbnail: "/media-vision.png" },
+  { title: "Lagos Story Futures: Behind the Scenes", duration: "12:15", thumbnail: "/media-bts.png" },
+  { title: "Meet the Culture Makers: Season 1", duration: "22:08", thumbnail: "/media-creators.png" }
 ];
 
 const resources = [
@@ -34,7 +34,7 @@ export default function ResourcesPage() {
         eyebrow="Resources & Media Hub"
         title="Stories, insights, and knowledge from the ecosystem."
         description="Official publications, video content, press materials, and creator toolkits."
-        backgroundImage="/ReelRhyde Abuja — live African concert with stage lights.jpg"
+        backgroundImage="/festival-abuja.png"
       />
 
       {/* Tab nav */}
