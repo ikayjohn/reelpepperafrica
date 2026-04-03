@@ -75,6 +75,7 @@ export default function FestivalsPage() {
         eyebrow="Festivals & Convergences"
         title="Experience Culture Across 54 Nations"
         description="Live cultural experiences that move people from audience to active participants. Register for upcoming festivals and events."
+        backgroundImage="/ReelKulture Lagos — African music festival, concert crowd at night.jpg"
       />
 
       {/* Filter bar placeholder */}
@@ -118,7 +119,7 @@ export default function FestivalsPage() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   {festival.tokenEligible && (
-                    <span className="absolute right-3 top-3 rounded-full bg-gold-500 px-2.5 py-1 text-xs font-semibold text-green-900">
+                    <span className="absolute right-3 top-3 rounded-full bg-gold-500 px-2.5 py-1 text-xs font-semibold text-white">
                       Token Eligible
                     </span>
                   )}
@@ -144,7 +145,7 @@ export default function FestivalsPage() {
                     ))}
                   </div>
                   <p className="mt-3 text-small text-warm-600">{festival.description}</p>
-                  <button className="mt-4 w-full rounded-btn bg-gold-500 py-2.5 text-sm font-semibold text-green-900 transition-colors hover:bg-gold-400">
+                  <button className="mt-4 w-full rounded-btn bg-gold-500 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-gold-500">
                     Register Interest
                   </button>
                 </div>

@@ -34,6 +34,7 @@ export default function ResourcesPage() {
         eyebrow="Resources & Media Hub"
         title="Stories, insights, and knowledge from the ecosystem."
         description="Official publications, video content, press materials, and creator toolkits."
+        backgroundImage="/ReelRhyde Abuja — live African concert with stage lights.jpg"
       />
 
       {/* Tab nav */}
@@ -44,7 +45,7 @@ export default function ResourcesPage() {
               key={tab}
               className={`shrink-0 rounded-btn px-4 py-2 text-sm font-medium transition-colors ${
                 i === 0
-                  ? "bg-green-800 text-white"
+                  ? "bg-gold-500 text-white"
                   : "text-warm-600 hover:bg-warm-100"
               }`}
             >
@@ -73,7 +74,7 @@ export default function ResourcesPage() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-green-900 transition-transform group-hover:scale-110">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-gold-500 transition-transform group-hover:scale-110">
                       <Play className="ml-1 h-6 w-6" />
                     </div>
                   </div>
@@ -100,11 +101,11 @@ export default function ResourcesPage() {
           {resources.map((res, i) => (
             <Reveal key={res.title} delay={i * 0.05}>
               <div className="flex items-start gap-4 rounded-card border border-warm-100 bg-white p-5">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-card bg-green-50 text-green-800">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-card bg-gold-100 text-gold-500">
                   {res.icon}
                 </div>
                 <div className="flex-1">
-                  <span className="text-label uppercase text-green-600">{res.type}</span>
+                  <span className="text-label uppercase text-gold-500">{res.type}</span>
                   <h3 className="mt-1 font-body text-sm font-semibold text-warm-900">
                     {res.title}
                   </h3>

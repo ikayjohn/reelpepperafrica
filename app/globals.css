@@ -3,40 +3,40 @@
 @tailwind utilities;
 
 :root {
-  /* === PRIMARY PALETTE === */
-  --rp-green-900: #071F0E;
-  --rp-green-800: #0A2E1A;
-  --rp-green-700: #0F4528;
-  --rp-green-600: #1A5E3A;
-  --rp-green-100: #E8F5E9;
-  --rp-green-50: #F1F8F2;
+  /* === PRIMARY PALETTE (Netflix-inspired Dark) === */
+  --rp-blue-900: #0A0A0A;
+  --rp-blue-800: #141414;
+  --rp-blue-700: #1F1F1F;
+  --rp-blue-600: #2A2A2A;
+  --rp-blue-100: #E5E5E5;
+  --rp-blue-50: #F5F5F5;
 
-  /* === ACTION / GOLD === */
-  --rp-gold-500: #D4A017;
-  --rp-gold-400: #E8B930;
-  --rp-gold-300: #F0D060;
-  --rp-gold-100: #FFF8E1;
-  --rp-gold-900: #5C4500;
+  /* === ACTION / RED (Netflix Red) === */
+  --rp-gold-500: #E50914;
+  --rp-gold-400: #F6121D;
+  --rp-gold-300: #FF3B3B;
+  --rp-gold-100: #FFE5E5;
+  --rp-gold-900: #8B0000;
 
-  /* === PEPPER RED === */
-  --rp-red-500: #C43D2E;
-  --rp-red-400: #D85545;
-  --rp-red-100: #FDECEA;
-  --rp-red-900: #5A1A12;
+  /* === ACCENT BLUE === */
+  --rp-red-500: #1A6BC4;
+  --rp-red-400: #3080D8;
+  --rp-red-100: #E0EEFA;
+  --rp-red-900: #0A3366;
 
-  /* === WARM NEUTRALS === */
-  --rp-cream: #FAF7F2;
-  --rp-cream-dark: #F0EBE3;
-  --rp-warm-gray-100: #E8E4DD;
-  --rp-warm-gray-300: #B8B2A8;
-  --rp-warm-gray-600: #6B6560;
-  --rp-warm-gray-900: #1A1816;
+  /* === NEUTRALS === */
+  --rp-cream: #FAFAFA;
+  --rp-cream-dark: #F0F0F0;
+  --rp-warm-gray-100: #E0E0E0;
+  --rp-warm-gray-300: #999999;
+  --rp-warm-gray-600: #555555;
+  --rp-warm-gray-900: #141414;
 
   /* === SEMANTIC === */
-  --rp-success: #1D9E75;
+  --rp-success: #1A6BC4;
   --rp-warning: #E8B930;
-  --rp-error: #C43D2E;
-  --rp-info: #2B7AB8;
+  --rp-error: #E50914;
+  --rp-info: #1A6BC4;
 
   /* === SPACING === */
   --space-1: 0.25rem;
@@ -98,7 +98,7 @@ select {
 }
 
 ::selection {
-  background: rgba(212, 160, 23, 0.25);
+  background: rgba(229, 9, 20, 0.25);
   color: var(--rp-warm-gray-900);
 }
 
@@ -114,7 +114,7 @@ select {
 
 /* Body text links */
 .prose-container a {
-  color: var(--rp-green-600);
+  color: var(--rp-gold-500);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
@@ -127,7 +127,7 @@ select {
 
 /* Focus rings */
 :focus-visible {
-  outline: 2px solid var(--rp-gold-500);
+  outline: 2px solid var(--rp-red-500);
   outline-offset: 2px;
 }
 
@@ -153,19 +153,19 @@ select {
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--rp-green-600);
+    color: var(--rp-gold-500);
   }
 
   .section-alt {
     background-color: var(--rp-cream-dark);
   }
 
-  .section-alt-green {
-    background-color: var(--rp-green-50);
+  .section-alt-blue {
+    background-color: var(--rp-blue-50);
   }
 
   .section-dark {
-    background-color: var(--rp-green-900);
+    background-color: #000;
     color: var(--rp-cream);
   }
 }

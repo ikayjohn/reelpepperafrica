@@ -16,8 +16,8 @@ export function Navbar() {
     <>
       <header
         className={cn(
-          "fixed inset-x-0 top-0 z-50 border-b border-transparent transition-colors duration-300",
-          "bg-green-900/95 backdrop-blur-xl"
+          "absolute inset-x-0 top-0 z-50 border-b border-transparent transition-colors duration-300",
+          "bg-transparent backdrop-blur-md"
         )}
         style={{ borderColor: "rgba(255,255,255,0.08)" }}
       >
@@ -49,7 +49,7 @@ export function Navbar() {
                     "rounded-btn px-3 py-2 text-sm font-medium transition-colors duration-150",
                     active
                       ? "text-gold-500"
-                      : "text-green-100 hover:text-white"
+                      : "text-white/70 hover:text-white"
                   )}
                 >
                   {item.label}
@@ -65,7 +65,7 @@ export function Navbar() {
           <div className="hidden lg:block">
             <Link
               href="/get-involved"
-              className="inline-flex items-center rounded-btn bg-gold-500 px-5 py-2.5 text-sm font-semibold text-green-900 transition-colors duration-150 hover:bg-gold-400"
+              className="inline-flex items-center rounded-btn bg-gold-500 px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-150 hover:bg-white hover:text-gold-500"
             >
               Join the Movement
             </Link>
@@ -84,7 +84,7 @@ export function Navbar() {
 
       {/* Mobile menu overlay */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-40 bg-green-900 pt-20 lg:hidden">
+        <div className="fixed inset-0 z-40 bg-black pt-20 lg:hidden">
           <nav className="flex flex-col gap-1 px-6 py-8">
             {navigation.map((item) => {
               const active = pathname === item.href;
@@ -96,8 +96,8 @@ export function Navbar() {
                   className={cn(
                     "rounded-btn px-4 py-3 text-lg font-medium transition-colors",
                     active
-                      ? "bg-green-800 text-gold-500"
-                      : "text-green-100 hover:bg-green-800 hover:text-white"
+                      ? "bg-white/10 text-gold-500"
+                      : "text-white/70 hover:bg-white/10 hover:text-white"
                   )}
                 >
                   {item.label}
@@ -108,7 +108,7 @@ export function Navbar() {
               <Link
                 href="/get-involved"
                 onClick={() => setMobileOpen(false)}
-                className="block rounded-btn bg-gold-500 px-6 py-3.5 text-center text-base font-semibold text-green-900"
+                className="block rounded-btn bg-gold-500 px-6 py-3.5 text-center text-base font-semibold text-white transition-colors hover:bg-white hover:text-gold-500"
               >
                 Join the Movement
               </Link>

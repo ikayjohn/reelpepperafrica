@@ -39,6 +39,7 @@ export default function MarketplacePage() {
         eyebrow="The Culture Marketplace"
         title="The marketplace for Africa's creative economy."
         description="Discover art, fashion, music, and cultural products from verified vendors across the continent."
+        backgroundImage="/African market vendor selling creative.jpg"
       />
 
       {/* Category tabs */}
@@ -49,7 +50,7 @@ export default function MarketplacePage() {
               key={cat}
               className={`shrink-0 rounded-btn px-4 py-2 text-sm font-medium transition-colors ${
                 i === 0
-                  ? "bg-green-800 text-white"
+                  ? "bg-gold-500 text-white"
                   : "text-warm-600 hover:bg-warm-100"
               }`}
             >
@@ -82,7 +83,7 @@ export default function MarketplacePage() {
                   <h3 className="font-body text-sm font-semibold text-warm-900">{product.name}</h3>
                   <p className="mt-0.5 text-sm font-semibold text-gold-500">{product.price}</p>
                   <p className="mt-0.5 text-small text-warm-300">{product.vendor}</p>
-                  <button className="mt-3 w-full rounded-btn bg-gold-500 py-2 text-sm font-semibold text-green-900 transition-colors hover:bg-gold-400">
+                  <button className="mt-3 w-full rounded-btn bg-gold-500 py-2 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-gold-500">
                     Add to Cart
                   </button>
                 </div>
@@ -93,7 +94,7 @@ export default function MarketplacePage() {
       </Section>
 
       {/* Vendor CTA */}
-      <Section variant="alt-green">
+      <Section variant="alt-blue">
         <Reveal>
           <div className="grid items-center gap-8 lg:grid-cols-2">
             <div>

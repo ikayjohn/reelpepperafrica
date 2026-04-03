@@ -1,7 +1,8 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { TrendingUp, Users, Globe, BarChart3 } from "lucide-react";
+import Image from "next/image";
+
 
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
@@ -18,24 +19,24 @@ const stats = [
 
 const investmentVehicles = [
   {
-    icon: <TrendingUp className="h-6 w-6" />,
     title: "Creative Ventures Fund",
-    description: "Direct investment into high-potential creative enterprises across the continent."
+    description: "Direct investment into high-potential creative enterprises across the continent.",
+    image: "/pexels-ahmad-muhammad-mahuta-2154109106-33789161.jpg"
   },
   {
-    icon: <Users className="h-6 w-6" />,
     title: "Festival Sponsorship",
-    description: "Brand visibility and cultural alignment through flagship festival partnerships."
+    description: "Brand visibility and cultural alignment through flagship festival partnerships.",
+    image: "/mpumelelo-macu-l_YNobbDYJk-unsplash.jpg"
   },
   {
-    icon: <Globe className="h-6 w-6" />,
     title: "Token Economy Participation",
-    description: "Structured participation in the tokenized creative economy infrastructure."
+    description: "Structured participation in the tokenized creative economy infrastructure.",
+    image: "/karim-manjra-fm9wqDNXyQ0-unsplash.jpg"
   },
   {
-    icon: <BarChart3 className="h-6 w-6" />,
     title: "Impact Fund",
-    description: "Social returns through health, education, and sustainability programs."
+    description: "Social returns through health, education, and sustainability programs.",
+    image: "/annie-spratt-cVEOh_JJmEE-unsplash.jpg"
   }
 ];
 
@@ -59,14 +60,22 @@ export default function InvestPartnerPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-green-900 pb-16 pt-28 md:pb-20 md:pt-32">
-        <Container>
+      <section className="relative bg-black pb-16 pt-28 md:pb-20 md:pt-32 overflow-hidden">
+        <Image
+          src="/FlixnFlex Nairobi kenyan live music.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-30"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+        <Container className="relative z-10">
           <Reveal>
             <span className="text-label uppercase text-gold-500">Invest &amp; Partner</span>
             <h1 className="mt-3 max-w-3xl font-display text-hero text-white">
               Invest in Africa&apos;s Creative Economy
             </h1>
-            <p className="mt-5 max-w-2xl text-body-lg text-green-100">
+            <p className="mt-5 max-w-2xl text-body-lg text-white/70">
               The African creative economy represents a $1 trillion addressable market across 500+
               cultural tribes and 54 nations. ReelPepper Africa is the infrastructure layer.
             </p>
@@ -78,7 +87,7 @@ export default function InvestPartnerPage() {
               <Reveal key={stat.label}>
                 <div className="rounded-card border border-white/10 bg-white/5 p-5 text-center">
                   <p className="font-display text-page-title text-gold-500">{stat.value}</p>
-                  <p className="mt-1 text-small text-green-100">{stat.label}</p>
+                  <p className="mt-1 text-small text-white/70">{stat.label}</p>
                 </div>
               </Reveal>
             ))}
@@ -86,29 +95,38 @@ export default function InvestPartnerPage() {
         </Container>
       </section>
 
-      {/* Investment vehicles */}
-      <Section>
-        <SectionHeading
-          eyebrow="Capital Pools & Funds"
-          title="Multiple pathways to participate."
-          description="Choose the investment vehicle that aligns with your institutional goals and impact thesis."
-        />
-        <div className="grid gap-5 sm:grid-cols-2">
-          {investmentVehicles.map((vehicle, i) => (
-            <Reveal key={vehicle.title} delay={i * 0.05}>
-              <div className="flex gap-4 rounded-card border border-warm-100 bg-white p-6">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-card bg-green-100 text-green-800">
-                  {vehicle.icon}
+      {/* Investment vehicles — image cards */}
+      <section className="bg-black py-14">
+        <Container>
+          <Reveal>
+            <span className="text-xs font-semibold uppercase tracking-widest text-gold-500">Capital Pools & Funds</span>
+            <h2 className="mt-2 font-display text-section-title text-white">Multiple pathways to participate.</h2>
+          </Reveal>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+            {investmentVehicles.map((vehicle, i) => (
+              <Reveal key={vehicle.title} delay={i * 0.05}>
+                <div className="group relative overflow-hidden rounded-lg">
+                  <div className="relative aspect-[16/9]">
+                    <Image
+                      src={vehicle.image}
+                      alt={vehicle.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 p-5">
+                    <h3 className="font-display text-lg font-semibold text-white">{vehicle.title}</h3>
+                    <p className="mt-1 text-sm text-white/60">{vehicle.description}</p>
+                  </div>
+                  <div className="absolute inset-0 border-2 border-transparent transition-colors group-hover:border-gold-500 rounded-lg" />
                 </div>
-                <div>
-                  <h3 className="font-body text-card-title text-warm-900">{vehicle.title}</h3>
-                  <p className="mt-1 text-body text-warm-600">{vehicle.description}</p>
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </Section>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
 
       {/* Partnership tiers */}
       <Section variant="alt">
@@ -138,8 +156,8 @@ export default function InvestPartnerPage() {
           />
 
           {submitted ? (
-            <div className="rounded-card border border-green-600 bg-green-50 p-6">
-              <p className="font-medium text-green-800">
+            <div className="rounded-card border border-gold-500 bg-gold-100 p-6">
+              <p className="font-medium text-gold-900">
                 Thank you for your interest. Our team will be in touch within 48 hours.
               </p>
             </div>
@@ -216,7 +234,7 @@ export default function InvestPartnerPage() {
               </label>
               <button
                 type="submit"
-                className="h-12 rounded-btn bg-gold-500 text-sm font-semibold text-green-900 transition-colors hover:bg-gold-400"
+                className="h-12 rounded-btn bg-gold-500 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-gold-500"
               >
                 Submit Inquiry
               </button>

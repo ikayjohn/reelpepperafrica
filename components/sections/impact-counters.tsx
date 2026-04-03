@@ -15,7 +15,7 @@ const counters = [
 
 export function ImpactCounters() {
   return (
-    <section className="bg-green-900 py-[var(--section-py)]">
+    <section className="bg-black py-[var(--section-py)]">
       <Container>
         <Reveal>
           <p className="mb-12 text-center font-display text-section-title text-white">

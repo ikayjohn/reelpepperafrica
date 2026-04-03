@@ -57,7 +57,7 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-green-900 pt-16 text-green-100">
+    <footer className="bg-black pt-16 text-white/80">
       <Container>
         {/* 4-column grid */}
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
@@ -69,7 +69,7 @@ export function Footer() {
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-small text-green-100/70 transition-colors hover:text-white"
+                      className="text-small text-white/80/70 transition-colors hover:text-white"
                     >
                       {link.label}
                     </a>
@@ -87,7 +87,7 @@ export function Footer() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-small text-green-100/60 transition-colors hover:text-gold-500"
+                className="text-small text-white/80/60 transition-colors hover:text-gold-500"
               >
                 {link.label}
               </a>
@@ -96,16 +96,16 @@ export function Footer() {
 
           <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
             <div className="relative">
-              <Mail className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-green-100/40" />
+              <Mail className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/80/40" />
               <input
                 type="email"
                 placeholder="your@email.com"
-                className="h-10 rounded-btn border border-white/10 bg-white/5 pl-10 pr-4 text-sm text-white placeholder:text-green-100/40 outline-none transition focus:border-gold-500"
+                className="h-10 rounded-btn border border-white/10 bg-white/5 pl-10 pr-4 text-sm text-white placeholder:text-white/80/40 outline-none transition focus:border-gold-500"
               />
             </div>
             <button
               type="submit"
-              className="h-10 rounded-btn bg-gold-500 px-5 text-sm font-semibold text-green-900 transition-colors hover:bg-gold-400"
+              className="h-10 rounded-btn bg-gold-500 px-5 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-gold-500"
             >
               Subscribe
             </button>
@@ -114,7 +114,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-8 border-t border-white/10 py-6 text-center">
-          <p className="text-small text-green-100/50">
+          <p className="text-small text-white/80/50">
             &copy; {new Date().getFullYear()} ReelPepper Africa. All rights reserved.
           </p>
         </div>

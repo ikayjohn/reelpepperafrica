@@ -20,6 +20,7 @@ export default function AboutPage() {
         eyebrow="About ReelPepper Africa"
         title="Redefining Culture as Economic Sovereignty"
         description="ReelPepper Africa is a pan-African creative economy platform that turns cultural participation into structured economic returns."
+        backgroundImage="/African woman in vibrant traditional fashion.jpg"
       />
 
       {/* Vision Statement */}
@@ -121,7 +122,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Agenda 2063 Alignment */}
-      <Section variant="alt-green">
+      <Section variant="alt-blue">
         <SectionHeading
           eyebrow="Continental Alignment"
           title="Contributing to Africa's Agenda 2063."

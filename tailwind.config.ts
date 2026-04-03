@@ -14,13 +14,13 @@ const config: Config = {
           DEFAULT: "var(--rp-cream)",
           dark: "var(--rp-cream-dark)"
         },
-        green: {
-          50: "var(--rp-green-50)",
-          100: "var(--rp-green-100)",
-          600: "var(--rp-green-600)",
-          700: "var(--rp-green-700)",
-          800: "var(--rp-green-800)",
-          900: "var(--rp-green-900)"
+        blue: {
+          50: "var(--rp-blue-50)",
+          100: "var(--rp-blue-100)",
+          600: "var(--rp-blue-600)",
+          700: "var(--rp-blue-700)",
+          800: "var(--rp-blue-800)",
+          900: "var(--rp-blue-900)"
         },
         gold: {
           100: "var(--rp-gold-100)",

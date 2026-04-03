@@ -3,12 +3,7 @@
 import Image from "next/image";
 import {
   ArrowRight,
-  Users,
-  ShoppingBag,
-  Music,
-  Landmark,
-  Smartphone,
-  Leaf,
+  Play,
   ChevronDown,
   Mail
 } from "lucide-react";
@@ -16,48 +11,7 @@ import {
 import { Container } from "@/components/ui/container";
 import { LinkButton } from "@/components/ui/link-button";
 import { Reveal } from "@/components/ui/reveal";
-import { Section } from "@/components/ui/section";
-import { SectionHeading } from "@/components/ui/section-heading";
 import { ImpactCounters } from "@/components/sections/impact-counters";
-
-const ecosystemPillars = [
-  {
-    icon: <Users className="h-6 w-6" />,
-    title: "Citizen Activation",
-    description: "Join and participate as a Culture Citizen",
-    href: "/ecosystem#citizen-activation"
-  },
-  {
-    icon: <ShoppingBag className="h-6 w-6" />,
-    title: "Creative Commerce",
-    description: "Buy, sell, and trade cultural products",
-    href: "/ecosystem#creative-commerce"
-  },
-  {
-    icon: <Music className="h-6 w-6" />,
-    title: "Festivals & Convergences",
-    description: "Experience culture across 54 nations",
-    href: "/ecosystem#festivals"
-  },
-  {
-    icon: <Landmark className="h-6 w-6" />,
-    title: "Creative Finance",
-    description: "Fund and invest in creative ventures",
-    href: "/ecosystem#creative-finance"
-  },
-  {
-    icon: <Smartphone className="h-6 w-6" />,
-    title: "Digital Infrastructure",
-    description: "Mobile-first access via tokens and telecom",
-    href: "/ecosystem#digital-infrastructure"
-  },
-  {
-    icon: <Leaf className="h-6 w-6" />,
-    title: "Impact & Sustainability",
-    description: "Track real outcomes in health, green, and education",
-    href: "/ecosystem#impact"
-  }
-];
 
 const featuredFestivals = [
   {
@@ -77,307 +31,309 @@ const featuredFestivals = [
     date: "May 12-18, 2026",
     location: "Accra, Ghana",
     image: "/ArtBuddie Accra — Ghanaian art exhibitioncommunity gathering.png"
+  },
+  {
+    title: "Krea84Reel Port Harcourt",
+    date: "April 20-25, 2026",
+    location: "Port Harcourt, Nigeria",
+    image: "/Krea84Reel Port Harcourt — African food & art cultural event.jpg"
+  },
+  {
+    title: "FlixnFlex Nairobi",
+    date: "June 8-14, 2026",
+    location: "Nairobi, Kenya",
+    image: "/FlixnFlex Nairobi kenyan live music.jpg"
   }
 ];
 
 const marketplaceProducts = [
-  { name: "Ankara Print Wall Art", price: "₦15,000", vendor: "Naija Canvas Studio", image: "/Ankara print wall art.png" },
-  { name: "Afrobeats Production Kit", price: "₦45,000", vendor: "Afro Sonic Labs", image: "/Music production studio.jpg" },
-  { name: "Lagos Street Photography Print", price: "₦8,500", vendor: "Iya Oge Designs", image: "/Lagos street photography.jpg" },
-  { name: "Handwoven Kente Tote Bag", price: "₦22,000", vendor: "Accra Weavers Co.", image: "/Handwoven kente tote bag.jpg" }
+  { name: "Ankara Print Wall Art", price: "₦15,000", image: "/Ankara print wall art.png" },
+  { name: "Afrobeats Production Kit", price: "₦45,000", image: "/Music production studio.jpg" },
+  { name: "Lagos Street Photography", price: "₦8,500", image: "/Lagos street photography.jpg" },
+  { name: "Handwoven Kente Tote", price: "₦22,000", image: "/Handwoven kente tote bag.jpg" },
+  { name: "Adire Indigo Runner", price: "₦12,500", image: "/Adire indigo-dyed fabric batik.png" },
+  { name: "Beaded Jewelry Set", price: "₦18,000", image: "/African beaded jewelry set.jpg" },
+  { name: "Handcrafted Djembe", price: "₦55,000", image: "/Handcrafted djembe drum.jpg" },
+  { name: "African Instruments", price: "₦35,000", image: "/African musical instruments .jpg" }
 ];
 
 const spotlights = [
   {
     name: "Adaeze Okonkwo",
     role: "Fashion Designer, Lagos",
-    quote: "ReelPepper gave my brand a stage that reaches beyond borders. It's not just commerce — it's cultural infrastructure.",
+    quote: "ReelPepper gave my brand a stage that reaches beyond borders.",
     image: "/African woman portrait — fashion designer.jpg"
   },
   {
     name: "Kwame Asante",
     role: "Filmmaker, Accra",
-    quote: "For the first time, I see a platform that treats African creators as the architects, not the content.",
+    quote: "A platform that treats African creators as the architects, not the content.",
     image: "/African man portrait — filmmaker.jpg"
   },
   {
     name: "Fatimah Bello",
     role: "Music Producer, Abuja",
-    quote: "The ecosystem model means my music funds other creators. That's the kind of cycle Africa needs.",
+    quote: "My music funds other creators. That's the kind of cycle Africa needs.",
     image: "/African woman portrait — music producer.png"
   }
 ];
 
-const pathways = [
-  {
-    icon: <Users className="h-6 w-6" />,
-    title: "Citizen",
-    description: "Join the movement and participate in Africa's creative economy",
-    href: "/get-involved"
-  },
-  {
-    icon: <Music className="h-6 w-6" />,
-    title: "Creator",
-    description: "Showcase your talent and access funding, streaming, and festivals",
-    href: "/get-involved"
-  },
-  {
-    icon: <ShoppingBag className="h-6 w-6" />,
-    title: "Vendor",
-    description: "List your products and reach customers across 54 nations",
-    href: "/get-involved"
-  },
-  {
-    icon: <Landmark className="h-6 w-6" />,
-    title: "Investor",
-    description: "Fund creative ventures and earn structured returns",
-    href: "/invest-partner"
-  }
+const ecosystemImages = [
+  { title: "Citizen Activation", image: "/African cultural performancefestival with vibrant crowd.jpg", href: "/ecosystem#citizen-activation" },
+  { title: "Creative Commerce", image: "/African market vendor selling creative.jpg", href: "/ecosystem#creative-commerce" },
+  { title: "Festivals", image: "/ReelKulture Johannesburg - South African musicculture festival.jpg", href: "/ecosystem#festivals" },
+  { title: "Creative Finance", image: "/Lagos street photography.jpg", href: "/ecosystem#creative-finance" },
+  { title: "Digital Infrastructure", image: "/Music production studio.jpg", href: "/ecosystem#digital-infrastructure" },
+  { title: "Impact & Sustainability", image: "/African woman in vibrant traditional fashion.jpg", href: "/ecosystem#impact" }
 ];
 
 export default function HomePage() {
   return (
     <>
-      {/* ========== 1. HERO ========== */}
-      <section className="relative flex min-h-[100svh] items-center bg-green-900">
+      {/* ========== 1. HERO — Full-screen cinematic ========== */}
+      <section className="relative flex min-h-[100svh] items-center bg-black">
         <Image
           src="/African cultural performancefestival with vibrant crowd.jpg"
           alt="African performers on stage during a vibrant cultural event."
           fill
-          className="object-cover opacity-40"
+          className="object-cover opacity-60"
           sizes="100vw"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-green-900 via-green-900/60 to-green-900/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-transparent to-transparent" />
 
         <Container className="relative z-10 py-32">
           <Reveal>
-            <h1 className="max-w-4xl font-display text-hero text-white">
+            <h1 className="max-w-3xl font-display text-hero text-white">
               Culture as Capital.
               <br />
               Entertainment as Infrastructure.
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-6 max-w-xl text-body-lg text-green-100">
+            <p className="mt-5 max-w-md text-lg text-white/70">
               Join 12,400+ Culture Citizens building Africa&apos;s creative economy.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <LinkButton href="/marketplace">Explore Marketplace</LinkButton>
-              <LinkButton href="/get-involved" variant="ghost" className="border-white/30 text-white hover:bg-white/10 hover:text-white">
+              <LinkButton href="/get-involved" variant="ghost" className="border-white/30 text-white hover:bg-gold-500 hover:text-white hover:border-gold-500">
                 Become a Culture Citizen
-              </LinkButton>
-              <LinkButton href="/ecosystem" variant="ghost" className="border-white/30 text-white hover:bg-white/10 hover:text-white">
-                Activate Your Token
               </LinkButton>
             </div>
           </Reveal>
         </Container>
 
-        <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 animate-bounce text-white/60">
+        <div className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 animate-bounce text-white/40">
           <ChevronDown className="h-6 w-6" />
         </div>
       </section>
 
-      {/* ========== 2. ECOSYSTEM OVERVIEW ========== */}
-      <Section>
-        <SectionHeading
-          eyebrow="The Ecosystem"
-          title="One Ecosystem. Six Pillars. 54 Nations."
-          description="ReelPepper Africa turns cultural participation into structured economic power through six integrated pillars."
-        />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {ecosystemPillars.map((pillar, i) => (
-            <Reveal key={pillar.title} delay={i * 0.05}>
-              <a
-                href={pillar.href}
-                className="group flex h-full flex-col rounded-card border border-warm-100 bg-cream-dark p-6 transition-all duration-150 hover:-translate-y-1 hover:shadow-card-hover"
-              >
-                <div className="flex h-11 w-11 items-center justify-center rounded-card bg-green-100 text-green-800 transition-colors group-hover:bg-green-800 group-hover:text-white">
-                  {pillar.icon}
-                </div>
-                <h3 className="mt-4 font-body text-card-title text-warm-900">{pillar.title}</h3>
-                <p className="mt-1.5 flex-1 text-body text-warm-600">{pillar.description}</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-green-800 opacity-0 transition-opacity group-hover:opacity-100">
-                  Learn more <ArrowRight className="h-3.5 w-3.5" />
-                </span>
+      {/* ========== 2. ECOSYSTEM — Netflix-style image row ========== */}
+      <section className="bg-black py-14">
+        <Container>
+          <Reveal>
+            <div className="mb-8 flex items-end justify-between">
+              <h2 className="font-display text-section-title text-white">The Ecosystem</h2>
+              <a href="/ecosystem" className="hidden items-center gap-1 text-sm font-medium text-gold-500 sm:inline-flex">
+                Explore All <ArrowRight className="h-4 w-4" />
               </a>
-            </Reveal>
-          ))}
-        </div>
-      </Section>
-
-      {/* ========== 3. FEATURED FESTIVALS ========== */}
-      <Section variant="alt">
-        <SectionHeading
-          eyebrow="Upcoming Festivals"
-          title="Experience culture across the continent."
-        />
-        <div className="grid gap-6 md:grid-cols-3">
-          {featuredFestivals.map((festival, i) => (
-            <Reveal key={festival.title} delay={i * 0.06}>
-              <div className="group overflow-hidden rounded-card border border-warm-100 bg-white">
-                <div className="relative aspect-[16/10] overflow-hidden">
+            </div>
+          </Reveal>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+            {ecosystemImages.map((item, i) => (
+              <Reveal key={item.title} delay={i * 0.04}>
+                <a href={item.href} className="group relative block aspect-[2/3] overflow-hidden rounded-lg">
                   <Image
-                    src={festival.image}
-                    alt={festival.title}
+                    src={item.image}
+                    alt={item.title}
                     fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 16vw"
                   />
-                </div>
-                <div className="p-5">
-                  <h3 className="font-body text-card-title text-warm-900">{festival.title}</h3>
-                  <p className="mt-1 text-small text-warm-600">{festival.date}</p>
-                  <p className="text-small text-warm-300">{festival.location}</p>
-                  <button className="mt-4 rounded-btn bg-gold-500 px-4 py-2 text-sm font-semibold text-green-900 transition-colors hover:bg-gold-400">
-                    Register Interest
-                  </button>
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <Reveal delay={0.2}>
-          <div className="mt-8 text-center">
-            <LinkButton href="/festivals" variant="secondary">View All Festivals</LinkButton>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-3">
+                    <p className="text-sm font-semibold text-white">{item.title}</p>
+                  </div>
+                  <div className="absolute inset-0 border-2 border-transparent transition-colors group-hover:border-gold-500 rounded-lg" />
+                </a>
+              </Reveal>
+            ))}
           </div>
-        </Reveal>
-      </Section>
+        </Container>
+      </section>
 
-      {/* ========== 4. MARKETPLACE PREVIEW ========== */}
-      <Section>
-        <SectionHeading
-          eyebrow="The Culture Marketplace"
-          title="Shop products from Africa's creative economy."
-          description="Discover art, fashion, music, and cultural products from verified vendors across the continent."
-        />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {marketplaceProducts.map((product, i) => (
-            <Reveal key={product.name} delay={i * 0.05}>
-              <div className="group overflow-hidden rounded-card border border-warm-100 bg-white">
-                <div className="relative aspect-square overflow-hidden">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  />
+      {/* ========== 3. FEATURED FESTIVALS — Wide cinematic cards ========== */}
+      <section className="bg-[#0a0a0a] py-14">
+        <Container>
+          <Reveal>
+            <div className="mb-8 flex items-end justify-between">
+              <h2 className="font-display text-section-title text-white">Upcoming Festivals</h2>
+              <LinkButton href="/festivals" variant="ghost" size="sm" className="hidden border-white/20 text-white hover:bg-gold-500 hover:text-white hover:border-gold-500 sm:inline-flex">
+                View All
+              </LinkButton>
+            </div>
+          </Reveal>
+          <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+            {featuredFestivals.map((festival, i) => (
+              <Reveal key={festival.title} delay={i * 0.05}>
+                <div className="group relative w-[320px] shrink-0 overflow-hidden rounded-lg sm:w-[380px]">
+                  <div className="relative aspect-[16/9] overflow-hidden">
+                    <Image
+                      src={festival.image}
+                      alt={festival.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      sizes="380px"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity group-hover:opacity-100">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gold-500/90 text-white">
+                        <Play className="ml-1 h-6 w-6" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 p-4">
+                    <h3 className="font-display text-lg font-semibold text-white">{festival.title}</h3>
+                    <p className="mt-1 text-sm text-white/60">{festival.date} &middot; {festival.location}</p>
+                  </div>
+                  <div className="absolute inset-0 border-2 border-transparent transition-colors group-hover:border-gold-500 rounded-lg" />
                 </div>
-                <div className="p-4">
-                  <h3 className="font-body text-sm font-semibold text-warm-900">{product.name}</h3>
-                  <p className="mt-0.5 text-sm font-semibold text-gold-500">{product.price}</p>
-                  <p className="mt-0.5 text-small text-warm-300">{product.vendor}</p>
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <Reveal delay={0.2}>
-          <div className="mt-8">
-            <LinkButton href="/marketplace" size="lg">Enter Marketplace</LinkButton>
+              </Reveal>
+            ))}
           </div>
-        </Reveal>
-      </Section>
+        </Container>
+      </section>
+
+      {/* ========== 4. MARKETPLACE — Product image grid ========== */}
+      <section className="bg-black py-14">
+        <Container>
+          <Reveal>
+            <div className="mb-8 flex items-end justify-between">
+              <h2 className="font-display text-section-title text-white">The Culture Marketplace</h2>
+              <LinkButton href="/marketplace" variant="ghost" size="sm" className="hidden border-white/20 text-white hover:bg-gold-500 hover:text-white hover:border-gold-500 sm:inline-flex">
+                Enter Marketplace
+              </LinkButton>
+            </div>
+          </Reveal>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+            {marketplaceProducts.map((product, i) => (
+              <Reveal key={product.name} delay={i * 0.04}>
+                <div className="group relative overflow-hidden rounded-lg">
+                  <div className="relative aspect-square overflow-hidden">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-110"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 p-3">
+                    <h3 className="text-sm font-semibold text-white">{product.name}</h3>
+                    <p className="text-sm font-bold text-gold-500">{product.price}</p>
+                  </div>
+                  <div className="absolute inset-0 border-2 border-transparent transition-colors group-hover:border-gold-500 rounded-lg" />
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
 
       {/* ========== 5. IMPACT COUNTERS ========== */}
       <ImpactCounters />
 
-      {/* ========== 6. CREATOR / VENDOR SPOTLIGHT ========== */}
-      <Section>
-        <SectionHeading
-          eyebrow="Meet the Culture Makers"
-          title="The people building Africa's creative economy."
-        />
-        <div className="grid gap-8">
-          {spotlights.map((person, i) => (
-            <Reveal key={person.name} delay={i * 0.06}>
-              <div
-                className={`grid items-center gap-8 md:grid-cols-[1fr_1.2fr] ${
-                  i % 2 !== 0 ? "md:[direction:rtl]" : ""
-                }`}
-              >
-                <div className="relative aspect-[4/5] overflow-hidden rounded-card md:[direction:ltr]">
+      {/* ========== 6. CREATOR SPOTLIGHT — Full-bleed image cards ========== */}
+      <section className="bg-[#0a0a0a] py-14">
+        <Container>
+          <Reveal>
+            <h2 className="mb-8 font-display text-section-title text-white">Meet the Culture Makers</h2>
+          </Reveal>
+          <div className="grid gap-4 md:grid-cols-3">
+            {spotlights.map((person, i) => (
+              <Reveal key={person.name} delay={i * 0.06}>
+                <div className="group relative aspect-[3/4] overflow-hidden rounded-lg">
                   <Image
                     src={person.image}
                     alt={person.name}
                     fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 45vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-6">
+                    <p className="text-sm italic text-white/80">&ldquo;{person.quote}&rdquo;</p>
+                    <p className="mt-3 font-display text-lg font-semibold text-white">{person.name}</p>
+                    <p className="text-sm text-gold-500">{person.role}</p>
+                  </div>
                 </div>
-                <div className="md:[direction:ltr]">
-                  <blockquote className="text-body-lg text-warm-900 italic">
-                    &ldquo;{person.quote}&rdquo;
-                  </blockquote>
-                  <p className="mt-4 font-body text-card-title text-warm-900">{person.name}</p>
-                  <p className="text-small text-warm-600">{person.role}</p>
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </Section>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
 
-      {/* ========== 7. JOIN THE MOVEMENT CTA ========== */}
-      <Section variant="alt">
-        <div className="text-center">
+      {/* ========== 7. FULL-WIDTH CTA BANNER ========== */}
+      <section className="relative py-24">
+        <Image
+          src="/African woman in vibrant traditional fashion.jpg"
+          alt="African woman in vibrant traditional fashion."
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/60" />
+        <Container className="relative z-10 text-center">
           <Reveal>
-            <h2 className="font-display text-page-title text-warm-900">
+            <h2 className="font-display text-page-title text-white">
               Your Culture Has Value. Activate It.
             </h2>
-            <p className="mx-auto mt-4 max-w-lg text-body-lg text-warm-600">
+            <p className="mx-auto mt-4 max-w-md text-lg text-white/70">
               Join as a citizen, creator, vendor, or investor.
             </p>
+            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+              <LinkButton href="/get-involved">Join the Movement</LinkButton>
+              <LinkButton href="/invest-partner" variant="ghost" className="border-white/30 text-white hover:bg-gold-500 hover:text-white hover:border-gold-500">
+                Invest / Partner
+              </LinkButton>
+            </div>
           </Reveal>
-        </div>
+        </Container>
+      </section>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {pathways.map((path, i) => (
-            <Reveal key={path.title} delay={i * 0.05}>
-              <a
-                href={path.href}
-                className="group flex h-full flex-col items-center rounded-card border border-warm-100 bg-white p-6 text-center transition-all duration-150 hover:-translate-y-1 hover:shadow-card-hover"
-              >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gold-100 text-gold-500 transition-colors group-hover:bg-gold-500 group-hover:text-green-900">
-                  {path.icon}
-                </div>
-                <h3 className="mt-4 font-body text-card-title text-warm-900">{path.title}</h3>
-                <p className="mt-1.5 text-small text-warm-600">{path.description}</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-gold-500">
-                  Get Started <ArrowRight className="h-3.5 w-3.5" />
-                </span>
-              </a>
-            </Reveal>
-          ))}
-        </div>
-
-        {/* Newsletter */}
-        <Reveal delay={0.2}>
-          <div className="mx-auto mt-12 max-w-md text-center">
-            <p className="text-sm font-medium text-warm-600">Stay in the loop</p>
-            <form className="mt-3 flex gap-2" onSubmit={(e) => e.preventDefault()}>
-              <div className="relative flex-1">
-                <Mail className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-warm-300" />
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="h-12 w-full rounded-input border border-warm-100 bg-white pl-10 pr-4 text-sm text-warm-900 outline-none transition focus:border-gold-500"
-                />
+      {/* ========== 8. NEWSLETTER — Minimal dark strip ========== */}
+      <section className="bg-black py-12">
+        <Container>
+          <Reveal>
+            <div className="mx-auto flex max-w-xl flex-col items-center gap-4 text-center sm:flex-row sm:text-left">
+              <div className="flex-1">
+                <p className="font-display text-lg font-semibold text-white">Stay in the loop</p>
+                <p className="mt-1 text-sm text-white/50">Get updates on festivals, drops, and ecosystem news.</p>
               </div>
-              <button
-                type="submit"
-                className="h-12 rounded-btn bg-gold-500 px-6 text-sm font-semibold text-green-900 transition-colors hover:bg-gold-400"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </Reveal>
-      </Section>
+              <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
+                <div className="relative">
+                  <Mail className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/30" />
+                  <input
+                    type="email"
+                    placeholder="your@email.com"
+                    className="h-11 rounded-btn border border-white/10 bg-white/5 pl-10 pr-4 text-sm text-white placeholder:text-white/30 outline-none transition focus:border-gold-500"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="h-11 rounded-btn bg-gold-500 px-5 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-gold-500"
+                >
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
     </>
   );
 }

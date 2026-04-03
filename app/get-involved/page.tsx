@@ -1,7 +1,8 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import { Users, Music, ShoppingBag, Landmark, Heart, Globe } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
@@ -11,33 +12,46 @@ import { LinkButton } from "@/components/ui/link-button";
 
 const pathways = [
   {
-    icon: <Users className="h-7 w-7" />,
     title: "Become a Culture Citizen",
     who: "Anyone who believes culture has economic value",
-    benefits: "Citizen ID, token wallet, marketplace access, festival perks, impact tracking",
-    cta: "Become a Citizen"
+    benefits: "Citizen ID, token wallet, marketplace access, festival perks",
+    cta: "Become a Citizen",
+    image: "/pexels-bestbe-models-975242-2331522.jpg"
   },
   {
-    icon: <Music className="h-7 w-7" />,
     title: "Become a Creator",
     who: "Musicians, filmmakers, artists, writers, influencers",
-    benefits: "Creator profile, funding access, streaming platform, festival showcase slots",
-    cta: "Apply as Creator"
+    benefits: "Creator profile, funding access, streaming, festival showcase",
+    cta: "Apply as Creator",
+    image: "/pexels-anchau-1663967297-33137686.jpg"
   },
   {
-    icon: <ShoppingBag className="h-7 w-7" />,
     title: "Become a Vendor",
     who: "Brands, merchants, and cultural entrepreneurs",
     benefits: "Marketplace storefront, vendor dashboard, pan-African distribution",
-    cta: "Register as Vendor"
+    cta: "Register as Vendor",
+    image: "/pexels-dokun-ayano-2197443-27291194.jpg"
   },
   {
-    icon: <Landmark className="h-7 w-7" />,
     title: "Invest / Partner",
-    who: "Institutions, funds, corporate sponsors, development partners",
+    who: "Institutions, funds, corporate sponsors",
     benefits: "Investor briefing, partnership tiers, creative capital fund access",
     cta: "Request Briefing",
-    href: "/invest-partner"
+    href: "/invest-partner",
+    image: "/pexels-cottonbro-4125600.jpg"
+  }
+];
+
+const volunteerCards = [
+  {
+    title: "Volunteer at Festivals",
+    description: "Help bring Africa's cultural festivals to life. Contribute your time, skills, and energy.",
+    image: "/oscar-omondi-yPvEDY-kMCI-unsplash.jpg"
+  },
+  {
+    title: "Become a Culture Envoy",
+    description: "Represent ReelPepper Africa in your city. Be the bridge between local culture and continental infrastructure.",
+    image: "/timothy-barlin-jUzs3ZbYXR0-unsplash.jpg"
   }
 ];
 
@@ -53,78 +67,96 @@ export default function GetInvolvedPage() {
 
   return (
     <>
-      <section className="bg-green-900 pb-16 pt-28 md:pb-20 md:pt-32">
-        <Container>
+      {/* Hero with background image */}
+      <section className="relative bg-black pb-16 pt-28 md:pb-20 md:pt-32 overflow-hidden">
+        <Image
+          src="/ReelKulture Johannesburg - South African musicculture festival.jpg"
+          alt=""
+          fill
+          className="object-cover opacity-35"
+          sizes="100vw"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+        <Container className="relative z-10">
           <Reveal>
             <span className="text-label uppercase text-gold-500">Join the Movement</span>
             <h1 className="mt-3 max-w-3xl font-display text-hero text-white">
               Your culture has value. Activate it.
             </h1>
-            <p className="mt-5 max-w-2xl text-body-lg text-green-100">
-              Choose your pathway and join Africa&apos;s creative economy. Whether you create, sell,
-              invest, or simply participate — there&apos;s a place for you.
+            <p className="mt-5 max-w-lg text-lg text-white/70">
+              Choose your pathway and join Africa&apos;s creative economy.
             </p>
           </Reveal>
         </Container>
       </section>
 
-      {/* 4 Pathway cards */}
-      <Section>
-        <div className="grid gap-6 md:grid-cols-2">
-          {pathways.map((path, i) => (
-            <Reveal key={path.title} delay={i * 0.05}>
-              <div className="flex h-full flex-col rounded-card border border-warm-100 bg-white p-8">
-                <div className="flex h-14 w-14 items-center justify-center rounded-card bg-gold-100 text-gold-500">
-                  {path.icon}
-                </div>
-                <h2 className="mt-5 font-display text-section-title text-warm-900">{path.title}</h2>
-                <p className="mt-2 text-small text-warm-600">
-                  <span className="font-medium text-warm-900">Who it&apos;s for:</span> {path.who}
-                </p>
-                <p className="mt-2 text-small text-warm-600">
-                  <span className="font-medium text-warm-900">What you get:</span> {path.benefits}
-                </p>
-                <div className="mt-6">
-                  <LinkButton href={(path.href || "/get-involved") as any} size="sm">
-                    {path.cta}
-                  </LinkButton>
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </Section>
+      {/* 4 Pathway cards — image-backed Netflix style */}
+      <section className="bg-black py-14">
+        <Container>
+          <div className="grid gap-4 md:grid-cols-2">
+            {pathways.map((path, i) => (
+              <Reveal key={path.title} delay={i * 0.05}>
+                <a
+                  href={path.href || "#register"}
+                  className="group relative block overflow-hidden rounded-lg"
+                >
+                  <div className="relative aspect-[16/9]">
+                    <Image
+                      src={path.image}
+                      alt={path.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 p-6">
+                    <h2 className="font-display text-xl font-semibold text-white">{path.title}</h2>
+                    <p className="mt-1 text-sm text-white/60">{path.who}</p>
+                    <p className="mt-2 text-sm text-white/50">{path.benefits}</p>
+                    <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-gold-500">
+                      {path.cta} <ArrowRight className="h-3.5 w-3.5" />
+                    </span>
+                  </div>
+                  <div className="absolute inset-0 border-2 border-transparent transition-colors group-hover:border-gold-500 rounded-lg" />
+                </a>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
 
-      {/* Volunteer + Ambassador */}
-      <Section variant="alt">
-        <div className="grid gap-6 md:grid-cols-2">
-          <Reveal>
-            <div className="rounded-card border border-warm-100 bg-white p-8">
-              <div className="flex h-11 w-11 items-center justify-center rounded-card bg-green-100 text-green-800">
-                <Heart className="h-6 w-6" />
-              </div>
-              <h3 className="mt-4 font-display text-section-title text-warm-900">Volunteer at Festivals</h3>
-              <p className="mt-2 text-body text-warm-600">
-                Help bring Africa&apos;s cultural festivals to life. Contribute your time, skills, and energy.
-              </p>
-            </div>
-          </Reveal>
-          <Reveal delay={0.05}>
-            <div className="rounded-card border border-warm-100 bg-white p-8">
-              <div className="flex h-11 w-11 items-center justify-center rounded-card bg-green-100 text-green-800">
-                <Globe className="h-6 w-6" />
-              </div>
-              <h3 className="mt-4 font-display text-section-title text-warm-900">Become a Culture Envoy</h3>
-              <p className="mt-2 text-body text-warm-600">
-                Represent ReelPepper Africa in your city or country. Be the bridge between local culture and continental infrastructure.
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </Section>
+      {/* Volunteer + Ambassador — image cards */}
+      <section className="bg-[#0a0a0a] py-14">
+        <Container>
+          <div className="grid gap-4 md:grid-cols-2">
+            {volunteerCards.map((card, i) => (
+              <Reveal key={card.title} delay={i * 0.05}>
+                <div className="group relative overflow-hidden rounded-lg">
+                  <div className="relative aspect-[16/9]">
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+                  </div>
+                  <div className="absolute inset-x-0 bottom-0 p-6">
+                    <h3 className="font-display text-xl font-semibold text-white">{card.title}</h3>
+                    <p className="mt-2 max-w-sm text-sm text-white/60">{card.description}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
 
       {/* Registration form */}
-      <Section>
+      <Section id="register">
         <div className="mx-auto max-w-2xl">
           <SectionHeading
             eyebrow="Registration"
@@ -132,8 +164,8 @@ export default function GetInvolvedPage() {
           />
 
           {submitted ? (
-            <div className="rounded-card border border-green-600 bg-green-50 p-6">
-              <p className="font-medium text-green-800">
+            <div className="rounded-card border border-gold-500 bg-gold-100 p-6">
+              <p className="font-medium text-gold-900">
                 Thanks for your interest! We&apos;ll be in touch soon to get you started.
               </p>
             </div>
@@ -211,7 +243,7 @@ export default function GetInvolvedPage() {
               </label>
               <button
                 type="submit"
-                className="h-12 rounded-btn bg-gold-500 text-sm font-semibold text-green-900 transition-colors hover:bg-gold-400"
+                className="h-12 rounded-btn bg-gold-500 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-gold-500"
               >
                 Submit Interest
               </button>

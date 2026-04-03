@@ -27,9 +27,9 @@ export function LinkButton({
         size === "sm" && "px-4 py-2 text-sm",
         size === "default" && "px-6 py-3 text-sm",
         size === "lg" && "px-8 py-4 text-base",
-        variant === "primary" && "bg-gold-500 text-green-900 hover:bg-gold-400",
-        variant === "secondary" && "bg-green-800 text-white hover:bg-green-700",
-        variant === "ghost" && "border border-green-800 text-green-800 hover:bg-green-800 hover:text-white",
+        variant === "primary" && "bg-gold-500 text-white hover:bg-white hover:text-gold-500",
+        variant === "secondary" && "bg-black text-white hover:bg-gold-500",
+        variant === "ghost" && "border border-blue-900 text-blue-900 hover:bg-gold-500 hover:text-white hover:border-gold-500",
         className
       )}
     >

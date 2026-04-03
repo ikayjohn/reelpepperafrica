@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import Image from "next/image";
 import { MessageSquare, Newspaper, Handshake, HeadphonesIcon } from "lucide-react";
 
 import { Section } from "@/components/ui/section";
@@ -43,12 +44,20 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="bg-green-900 pb-16 pt-28 md:pb-20 md:pt-32">
-        <Container>
+      <section className="relative bg-black pb-16 pt-28 md:pb-20 md:pt-32 overflow-hidden">
+        <Image
+          src="/ArtBuddie Accra — Ghanaian art exhibitioncommunity gathering.png"
+          alt=""
+          fill
+          className="object-cover opacity-30"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+        <Container className="relative z-10">
           <Reveal>
             <span className="text-label uppercase text-gold-500">Contact</span>
             <h1 className="mt-3 font-display text-hero text-white">Get in Touch</h1>
-            <p className="mt-5 max-w-2xl text-body-lg text-green-100">
+            <p className="mt-5 max-w-2xl text-body-lg text-white/70">
               Whether you&apos;re a creator, partner, investor, or simply curious — we&apos;d
               love to hear from you.
             </p>
@@ -82,8 +91,8 @@ export default function ContactPage() {
           />
 
           {submitted ? (
-            <div className="rounded-card border border-green-600 bg-green-50 p-6">
-              <p className="font-medium text-green-800">
+            <div className="rounded-card border border-gold-500 bg-gold-100 p-6">
+              <p className="font-medium text-gold-900">
                 Thank you for reaching out. We&apos;ll respond within 48 hours.
               </p>
             </div>
@@ -138,7 +147,7 @@ export default function ContactPage() {
               </label>
               <button
                 type="submit"
-                className="h-12 rounded-btn bg-gold-500 text-sm font-semibold text-green-900 transition-colors hover:bg-gold-400"
+                className="h-12 rounded-btn bg-gold-500 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-gold-500"
               >
                 Send Message
               </button>

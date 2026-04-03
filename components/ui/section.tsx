@@ -5,7 +5,7 @@ import { Container } from "./container";
 type SectionProps = {
   children: React.ReactNode;
   className?: string;
-  variant?: "default" | "alt" | "alt-green" | "dark";
+  variant?: "default" | "alt" | "alt-blue" | "dark";
   id?: string;
 };
 
@@ -16,7 +16,7 @@ export function Section({ children, className, variant = "default", id }: Readon
       className={cn(
         "py-[var(--section-py)]",
         variant === "alt" && "bg-cream-dark",
-        variant === "alt-green" && "bg-green-50",
+        variant === "alt-blue" && "bg-blue-50",
         variant === "dark" && "section-dark",
         className
       )}
