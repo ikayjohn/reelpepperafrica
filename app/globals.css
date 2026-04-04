@@ -13,6 +13,26 @@
   }
 }
 
+/* Image hover zoom — outside @layer so specificity beats Tailwind utilities */
+.image-hover-zoom {
+  transform: scale(1);
+  transform-origin: center;
+  will-change: transform;
+  transition: transform 500ms ease-out;
+}
+
+.group:hover .image-hover-zoom {
+  transform: scale(var(--image-hover-scale, 1.05));
+}
+
+.image-hover-zoom-105 {
+  --image-hover-scale: 1.03;
+}
+
+.image-hover-zoom-110 {
+  --image-hover-scale: 1.06;
+}
+
 :root {
   /* === PRIMARY PALETTE (Netflix-inspired Dark) === */
   --rp-blue-900: #0A0A0A;
