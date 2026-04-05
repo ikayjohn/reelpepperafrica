@@ -41,10 +41,30 @@ const investmentVehicles = [
 ];
 
 const tiers = [
-  { name: "Community Partner", range: "Contribution-based", benefits: "Logo placement, event access, community recognition" },
-  { name: "Corporate Sponsor", range: "₦5M - ₦25M", benefits: "Branded experiences, media features, marketplace integration" },
-  { name: "Strategic Partner", range: "₦25M - ₦100M", benefits: "Co-branded programs, board observer rights, priority access" },
-  { name: "Institutional Investor", range: "₦100M+", benefits: "Equity participation, governance input, full portfolio access" }
+  {
+    name: "Community Partner",
+    range: "Contribution-based",
+    benefits: "Logo placement, event access, community recognition",
+    image: "/partner-community-tier.png"
+  },
+  {
+    name: "Corporate Sponsor",
+    range: "₦5M - ₦25M",
+    benefits: "Branded experiences, media features, marketplace integration",
+    image: "/partner-corporate-tier.png"
+  },
+  {
+    name: "Strategic Partner",
+    range: "₦25M - ₦100M",
+    benefits: "Co-branded programs, board observer rights, priority access",
+    image: "/partner-strategic-tier.png"
+  },
+  {
+    name: "Institutional Investor",
+    range: "₦100M+",
+    benefits: "Equity participation, governance input, full portfolio access",
+    image: "/partner-institutional-tier.png"
+  }
 ];
 
 export default function InvestPartnerPage() {
@@ -137,10 +157,21 @@ export default function InvestPartnerPage() {
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {tiers.map((tier, i) => (
             <Reveal key={tier.name} delay={i * 0.05}>
-              <div className="flex h-full flex-col rounded-card border border-warm-100 bg-white p-6">
-                <h3 className="font-body text-card-title text-warm-900">{tier.name}</h3>
-                <p className="mt-2 text-sm font-semibold text-gold-500">{tier.range}</p>
-                <p className="mt-3 flex-1 text-small text-warm-600">{tier.benefits}</p>
+              <div className="flex h-full flex-col overflow-hidden rounded-card border border-warm-100 bg-white">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={tier.image}
+                    alt={tier.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="font-body text-card-title text-warm-900">{tier.name}</h3>
+                  <p className="mt-2 text-sm font-semibold text-gold-500">{tier.range}</p>
+                  <p className="mt-3 flex-1 text-small text-warm-600">{tier.benefits}</p>
+                </div>
               </div>
             </Reveal>
           ))}
