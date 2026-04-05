@@ -68,7 +68,7 @@ export function MarketplaceClient({ categories, products }: Readonly<Marketplace
                       src={product.image}
                       alt={product.name}
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      className="image-hover-zoom image-hover-zoom-105 object-cover"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     />
                   </div>

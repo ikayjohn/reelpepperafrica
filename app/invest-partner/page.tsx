@@ -111,7 +111,7 @@ export default function InvestPartnerPage() {
                       src={vehicle.image}
                       alt={vehicle.title}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="image-hover-zoom image-hover-zoom-110 object-cover"
                       sizes="(max-width: 768px) 100vw, 50vw"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />

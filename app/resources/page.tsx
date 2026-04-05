@@ -70,11 +70,11 @@ export default function ResourcesPage() {
                     src={video.thumbnail}
                     alt={video.title}
                     fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="image-hover-zoom image-hover-zoom-105 object-cover"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-gold-500 transition-transform group-hover:scale-110">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-gold-500 transform-gpu transition-transform duration-500 ease-out will-change-transform group-hover:scale-110">
                       <Play className="ml-1 h-6 w-6" />
                     </div>
                   </div>
